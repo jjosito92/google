@@ -1,88 +1,140 @@
 <!DOCTYPE html>
-<html lang="en"/>
-<head>
-	<title>Projec_GOOGLE</title>
-	<style type="text/css">
-		* {
-			background:#ebebeb;
-			margin:0;
-			padding:0;
-			border:0;
-		}		
-		
-		body {
-			background:url('http://teskostudio.com/StartPage/Images/bg.jpg');			
-		}
-		
-		#searchBox {		
-			position:fixed;	
-			opacity:0;
-		}
-		
-		.TextField {
-			font: normal normal bold 3em/125% 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;		
-			color:gray;
-			margin:0;
-			padding:0;
-			letter-spacing:0px;
-			border:none;			
-			border-bottom:#c9c9c9 1px solid;
-			background:transparent;
-			text-shadow: #fff 0 1px 1px;			
-		}		
-		
-		.TextField:focus 
-		{ 
-			outline:none; 
-		}
-	</style>
-	<link href='http://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>	
-</head>
 <html>
-	<body>
-		<section id="searchBox">
-			<form method="get" action="http://www.google.com/search" target="_blank">
-					<input name="q" type="text" class="TextField" maxlength="255"/>	
-			</form>		
-		</section>
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-		<script type="text/javascript">
-			
-			function resizer(){
-				var nWidth = jQuery(window).width();
-				
-				if(nWidth <= 960){
-					jQuery('#searchBox .TextField').css({'font-size' : '1.8em'});
-				}else {
-					jQuery('#searchBox .TextField').css({'font-size' : '3em'});
-				}
-				
-				var nTheMiddle = jQuery('#searchBox').width();
-				var xPos = nWidth * 0.5 - (nTheMiddle * 0.5);
-				
-				jQuery('#searchBox').css({'top' : '25%',
-											'left' : xPos+'px'
-				});
-				
-			}			
-			
-			function getFocus(){
-				var focusHere = jQuery('#searchBox .TextField');
-				focusHere = focusHere.focus();
-			}					
-			
-			jQuery(document).ready(function(){
-				
-				jQuery(window).resize(function(){
-					resizer();
-				});
-				jQuery(window).trigger('resize');					
-				jQuery('body').hide();
-				jQuery('#searchBox').css({'opacity' : '1'});
-				jQuery('body').delay(500).fadeIn(500, function(){
-					getFocus();	
-				});
-			});			
-		</script>		
-	</body>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Google : ">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Google</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/jjosito92/google">View on GitHub</a>
+
+          <h1 id="project_title">Google</h1>
+          <h2 id="project_tagline"></h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/jjosito92/google/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/jjosito92/google/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <p>&lt;!DOCTYPE html&gt;
+</p>
+
+    Projec_GOOGLE
+    
+        * {
+            background:#ebebeb;
+            margin:0;
+            padding:0;
+            border:0;
+        }       &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    body {
+        background:url(&amp;#39;http://teskostudio.com/StartPage/Images/bg.jpg&amp;#39;);           
+    }
+
+    #searchBox {        
+        position:fixed; 
+        opacity:0;
+    }
+
+    .TextField {
+        font: normal normal bold 3em/125% &amp;#39;Raleway&amp;#39;, Helvetica Neue, Helvetica, Arial, sans-serif;      
+        color:gray;
+        margin:0;
+        padding:0;
+        letter-spacing:0px;
+        border:none;            
+        border-bottom:#c9c9c9 1px solid;
+        background:transparent;
+        text-shadow: #fff 0 1px 1px;            
+    }       
+
+    .TextField:focus 
+    { 
+        outline:none; 
+    }
+&amp;lt;/style&amp;gt;
+&amp;lt;link href=&amp;#39;http://fonts.googleapis.com/css?family=Raleway:100&amp;#39; rel=&amp;#39;stylesheet&amp;#39; type=&amp;#39;text/css&amp;#39;&amp;gt;   
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/head&gt;
+&lt;html&gt;
+    &lt;body&gt;
+        &lt;section id="searchBox"&gt;
+            &lt;form method="get" action="http://www.google.com/search" target="_blank"&gt;
+                    &lt;input name="q" type="text" class="TextField" maxlength="255"/&gt; 
+            &lt;/form&gt;&lt;br&gt;
+        &lt;/section&gt;
+        &lt;script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"&gt;&lt;/script&gt;
+        &lt;script type="text/javascript"&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;        function resizer(){
+            var nWidth = jQuery(window).width();
+
+            if(nWidth &amp;lt;= 960){
+                jQuery(&amp;#39;#searchBox .TextField&amp;#39;).css({&amp;#39;font-size&amp;#39; : &amp;#39;1.8em&amp;#39;});
+            }else {
+                jQuery(&amp;#39;#searchBox .TextField&amp;#39;).css({&amp;#39;font-size&amp;#39; : &amp;#39;3em&amp;#39;});
+            }
+
+            var nTheMiddle = jQuery(&amp;#39;#searchBox&amp;#39;).width();
+            var xPos = nWidth * 0.5 - (nTheMiddle * 0.5);
+
+            jQuery(&amp;#39;#searchBox&amp;#39;).css({&amp;#39;top&amp;#39; : &amp;#39;25%&amp;#39;,
+                                        &amp;#39;left&amp;#39; : xPos+&amp;#39;px&amp;#39;
+            });
+
+        }           
+
+        function getFocus(){
+            var focusHere = jQuery(&amp;#39;#searchBox .TextField&amp;#39;);
+            focusHere = focusHere.focus();
+        }                   
+
+        jQuery(document).ready(function(){
+
+            jQuery(window).resize(function(){
+                resizer();
+            });
+            jQuery(window).trigger(&amp;#39;resize&amp;#39;);                   
+            jQuery(&amp;#39;body&amp;#39;).hide();
+            jQuery(&amp;#39;#searchBox&amp;#39;).css({&amp;#39;opacity&amp;#39; : &amp;#39;1&amp;#39;});
+            jQuery(&amp;#39;body&amp;#39;).delay(500).fadeIn(500, function(){
+                getFocus(); 
+            });
+        });         
+    &amp;lt;/script&amp;gt;       
+&amp;lt;/body&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;/html&gt;&lt;/p&gt;
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Google maintained by <a href="https://github.com/jjosito92">jjosito92</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
 </html>
