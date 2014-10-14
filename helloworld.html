@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en"/>
+<head>
+	<title>Project_GOOGLE</title>
+	<style type="text/css">
+		* {
+			background:#ebebeb;
+			margin:0;
+			padding:0;
+			border:0;
+		}		
+		
+		#searchBox {		
+			position:fixed;	
+			opacity:0;
+		}
+		
+		.TextField {
+			font: normal normal bold 3em/125% 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;		
+			color:gray;
+			margin:0;
+			padding:0;
+			letter-spacing:-1px;
+			border:none;			
+			border-bottom:#c9c9c9 1px solid;
+			background:transparent;
+			text-shadow: #fff 0 1px 1px;			
+		}		
+		
+		.TextField:focus 
+		{ 
+			outline:none; 
+		}
+	</style>
+	<link href='http://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>	
+</head>
+<html>
+	<body>
+		<section id="searchBox">
+			<form method="get" action="http://www.google.com/search" target="_blank">
+					<input name="q" type="text" class="TextField" maxlength="255"/>	
+			</form>		
+		</section>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+		<script type="text/javascript">
+			
+			function resizer(){
+				var nWidth = jQuery(window).width();
+				
+				if(nWidth <= 960){
+					jQuery('#searchBox .TextField').css({'font-size' : '1.8em'});
+				}else {
+					jQuery('#searchBox .TextField').css({'font-size' : '3em'});
+				}
+				
+				var nTheMiddle = jQuery('#searchBox').width();
+				var xPos = nWidth * 0.5 - (nTheMiddle * 0.5);
+				
+				jQuery('#searchBox').css({'top' : '25%',
+											'left' : xPos+'px'
+				});
+				
+			}			
+			
+			function getFocus(){
+				var focusHere = jQuery('#searchBox .TextField');
+				focusHere = focusHere.focus();
+			}					
+			
+			jQuery(document).ready(function(){
+				
+				jQuery(window).resize(function(){
+					resizer();
+				});
+				jQuery(window).trigger('resize');					
+				jQuery('body').hide();
+				jQuery('#searchBox').css({'opacity' : '1'});
+				jQuery('body').delay(500).fadeIn(500, function(){
+					getFocus();	
+				});
+			});			
+		</script>		
+	</body>
+</html>
